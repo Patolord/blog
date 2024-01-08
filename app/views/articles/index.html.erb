@@ -1,11 +1,12 @@
-<h1>Articles</h1>
 
-<ul>
+<h1 class="text-3xl font-bold underline decoration-wavy decoration-blue-500 mb-4">Articles</h1>
+
+<ul class="list-disc list-inside space-y-2">
   <% @articles.each do |article| %>
-    <li>
+    <li class="text-lg font-medium hover:text-blue-800">
       <%= link_to article.title, article %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path, class: "inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4" %>
